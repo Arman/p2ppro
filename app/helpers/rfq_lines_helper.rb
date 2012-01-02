@@ -1,0 +1,2 @@
+module RfqLinesHelper
+end

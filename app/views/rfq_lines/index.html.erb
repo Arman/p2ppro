@@ -1,0 +1,35 @@
+<h1>Listing rfq_lines</h1>
+
+<table>
+  <tr>
+    <th>Rfq</th>
+    <th>Line number</th>
+    <th>Part number</th>
+    <th>Nsn</th>
+    <th>Quantity</th>
+    <th>Description</th>
+    <th>Condition code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rfq_lines.each do |rfq_line| %>
+  <tr>
+    <td><%= rfq_line.rfq_id %></td>
+    <td><%= rfq_line.line_number %></td>
+    <td><%= rfq_line.part_number %></td>
+    <td><%= rfq_line.nsn %></td>
+    <td><%= rfq_line.quantity %></td>
+    <td><%= rfq_line.description %></td>
+    <td><%= rfq_line.condition_code %></td>
+    <td><%= link_to 'Show', rfq_line %></td>
+    <td><%= link_to 'Edit', edit_rfq_line_path(rfq_line) %></td>
+    <td><%= link_to 'Destroy', rfq_line, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rfq line', new_rfq_line_path %>

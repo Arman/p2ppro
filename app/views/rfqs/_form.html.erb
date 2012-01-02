@@ -1,0 +1,29 @@
+<%= form_for(@rfq) do |f| %>
+  <% if @rfq.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rfq.errors.count, "error") %> prohibited this rfq from being saved:</h2>
+
+      <ul>
+      <% @rfq.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :creator %><br />
+    <%= f.number_field :creator %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

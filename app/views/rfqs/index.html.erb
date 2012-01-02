@@ -1,0 +1,27 @@
+<h1>Listing rfqs</h1>
+
+<table>
+  <tr>
+    <th>Status</th>
+    <th>Creator</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rfqs.each do |rfq| %>
+  <tr>
+    <td><%= rfq.status %></td>
+    <td><%= rfq.creator %></td>
+    <td><%= rfq.notes %></td>
+    <td><%= link_to 'Show', rfq %></td>
+    <td><%= link_to 'Edit', edit_rfq_path(rfq) %></td>
+    <td><%= link_to 'Destroy', rfq, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rfq', new_rfq_path %>

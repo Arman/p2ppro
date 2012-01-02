@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rfq:</b>
+  <%= @rfq_line.rfq_id %>
+</p>
+
+<p>
+  <b>Line number:</b>
+  <%= @rfq_line.line_number %>
+</p>
+
+<p>
+  <b>Part number:</b>
+  <%= @rfq_line.part_number %>
+</p>
+
+<p>
+  <b>Nsn:</b>
+  <%= @rfq_line.nsn %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @rfq_line.quantity %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @rfq_line.description %>
+</p>
+
+<p>
+  <b>Condition code:</b>
+  <%= @rfq_line.condition_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_rfq_line_path(@rfq_line) %> |
+<%= link_to 'Back', rfq_lines_path %>
