@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20111229062458) do
 
   create_table "rfqs", :force => true do |t|
     t.string   "status"
-    t.integer  "creator"
+    t.integer  "creator_id"
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"

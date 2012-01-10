@@ -1,0 +1,13 @@
+<div class="row inline-inputs">
+  <div class="span16">
+    <div class="span1"><%= rlf.text_field :line_number, :class => 'tiny' %></div>
+    <div class="span2"><%= rlf.text_field :part_number, :class => 'small' %></div>
+    <div class="span2"><%= rlf.text_field :nsn, :class => 'small' %></div>
+    <div class="span6"><%= rlf.text_field :description, :class => 'xlarge' %></div>
+    <div class="span1"><%= rlf.number_field :quantity, :class => 'tiny' %></div>
+    <div class="span1"><%= rlf.text_field :condition_code, :class => 'tiny' %> </div>
+    <% unless rlf.object.new_record? %>
+      <div class="span1"><%= rlf.check_box :_destroy %></div>
+    <% end %>
+  </div>
+</div>

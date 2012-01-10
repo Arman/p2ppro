@@ -25,6 +25,7 @@ class RfqsController < ApplicationController
   # GET /rfqs/new.json
   def new
     @rfq = Rfq.new
+    3.times { @rfq.rfq_lines.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class RfqsController < ApplicationController
   # POST /rfqs.json
   def create
     @rfq = Rfq.new(params[:rfq])
+    @rfq.creator_id = current_user.id
 
     respond_to do |format|
       if @rfq.save

@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 	def app
-    "SQUAWK'EM"
+    "P2PPRO"
   end
   
   def logo

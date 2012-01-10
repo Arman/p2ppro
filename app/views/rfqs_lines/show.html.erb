@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Status:</b>
+  <%= @rfq.status %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @rfq.notes %>
+</p>
+
+<ol>
+	<% for item in @rfq.items %>
+		<li><%=h item.part_number %>
+	<% end %>
+</ol>
+
+<%= link_to 'Edit', edit_rfq_path(@item) %> |
+<%= link_to 'Back', rfqs_path %>

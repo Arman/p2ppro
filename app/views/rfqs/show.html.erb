@@ -7,13 +7,20 @@
 
 <p>
   <b>Creator:</b>
-  <%= @rfq.creator %>
+  <%= @rfq.creator.email %>
 </p>
 
 <p>
   <b>Notes:</b>
   <%= @rfq.notes %>
 </p>
+
+<p> rfq lines </p>
+<ol>
+<% for rl in @rfq.rfq_lines %>
+	<li><%= rl.description %> </li>
+<% end %>
+</ol>
 
 
 <%= link_to 'Edit', edit_rfq_path(@rfq) %> |

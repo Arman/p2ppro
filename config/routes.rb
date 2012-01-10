@@ -6,6 +6,9 @@ P2ppro::Application.routes.draw do
 
   resources :rfqs
 
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
   
 
   # The priority is based upon order of creation:
