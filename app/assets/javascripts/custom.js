@@ -1,21 +1,17 @@
-$(document).ready(function() 
-    { 
-        $("#listBusinesses").tablesorter(); 
-    } 
-); 
+$(".alert-message").alert();
+
+$('#topbar').scrollSpy();
+
+function remove_fields(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest(".line_fields").hide();
+}
+
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parent().before(content.replace(regexp, new_id));
+}
 
 
-$(function () {
-  $("a[rel=popover]")
-    .popover({
-      offset: 10, 
-      html : true
-    })
-    .click(function(e) {
-      e.preventDefault()
-    })
-})
 
-$(".alert-message").alert()
-
-$('#topbar').scrollSpy()
